@@ -1,0 +1,132 @@
+/* styles.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Restante do seu CSS */
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url('/imagens/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo {
+    position: fixed;
+    top: 0;
+    margin-top: auto;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(22, 22, 22, 0.8);
+    padding: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.escada  {
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    left: 20px; /* Ajuste a posição horizontal conforme necessário */
+    color: white;
+    font-size: 34px;
+    line-height: 36px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    height: 100vh;
+    top: 100px; /* Ajuste a posição vertical conforme necessário */
+    left: 40px; /* Ajuste a posição horizontal conforme necessário */   
+}
+
+/* Abaixo cor do texto hamburger em amarelo */
+.amarelo {
+    color: #d07c04; 
+}
+
+.escada div {
+    opacity: 0;
+}
+
+.escada div:nth-child(1) {
+    animation: fadeIn 0.5s 0.5s forwards;
+}
+
+.escada div:nth-child(2) {
+    animation: fadeIn 0.5s 1s forwards;
+}
+
+.escada div:nth-child(3) {
+    animation: fadeIn 0.5s 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Rodapé com ícones de contato */
+.conteudo-rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(22, 22, 22, 0.8);
+    padding: 10px 0;
+}
+
+/* Estilos específicos para ícones de contato */
+.contact-icon {
+    margin-right: 5px; /* Ajuste o valor conforme necessário para aumentar ou diminuir o espaçamento horizontal entre os ícones */
+    display: inline-block;
+    text-decoration: none;
+}
+
+.contact-icon img {
+    width: 25px;
+    height: 25px; /* Ajuste o tamanho conforme necessário */
+}
+
+.contact-icon:last-child {
+    margin-right: 0; /* Remove a margem do último ícone para evitar espaçamento extra à direita */
+}
+
+
+
+/* Estilo do botão de Acessar Cardápio */
+.botao-acessar-cardapio {
+    background-color: #f08b04;
+    color: #fff;
+    border: none;
+    margin: 480px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 20px; /* Espaçamento entre o botão e o conteúdo principal */
+    z-index: 2; /* Defina um valor maior para o z-index do botão */
+}
+
+.botao-acessar-cardapio:hover {
+    background-color: #d07c04;
+}
